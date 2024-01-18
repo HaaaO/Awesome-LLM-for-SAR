@@ -1,0 +1,244 @@
+%% The first command in your LaTeX source must be the \documentclass command.
+%%
+%% Options:
+%% twocolumn : Two column layout.
+%% hf: enable header and footer.
+\documentclass[
+twocolumn,
+% hf,
+]{ceurart}
+
+%%
+%% One can fix some overfulls
+\sloppy
+
+%%
+%% Minted listings support 
+%% Need pygment <http://pygments.org/> <http://pypi.python.org/pypi/Pygments>
+\usepackage{listings}
+%% auto break lines
+\lstset{breaklines=true}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% Rights management information.
+%% CC-BY is default license.
+\copyrightyear{2022}
+\copyrightclause{Copyright for this paper by its authors.
+  Use permitted under Creative Commons License Attribution 4.0
+  International (CC BY 4.0).}
+
+%%
+%% This command is for the conference information
+\conference{AAAI 2024 Spring Symposia, Socially Responsible AI for
+  Well-being, March 25--27, 2024, California, USA}
+
+%%
+%% The "title" command
+\title{How Can Large Language Models Enable Better Socially Assistive Human-Robot Interaction: A Brief Survey}
+
+\tnotemark[1]
+% \tnotetext[1]{You can use this document as the template for preparing your
+%   publication. We recommend using the latest version of the ceurart style.}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+\author[1]{Zhonghao Shi}[%
+% orcid=0000-0002-0877-7063,
+% email=kulyabov-ds@rudn.ru,
+% url=https://yamadharma.github.io/,
+]
+\cormark[1]
+% \fnmark[1]
+\address[1]{University of Southern California, Los Angeles, United States}
+
+
+\author[1]{Ellen Landrum}[%
+% orcid=0000-0001-7116-9338,
+% email=i.tiddi@vu.nl,
+% url=https://kmitd.github.io/ilaria/,
+]
+
+\author[1]{Allison O'Connell}[%
+% orcid=0000-0001-7116-9338,
+% email=i.tiddi@vu.nl,
+% url=https://kmitd.github.io/ilaria/,
+]
+% \fnmark[1]
+
+\author[1]{Mina Kian}[%
+% orcid=0000-0002-0877-7063,
+% email=kulyabov-ds@rudn.ru,
+% url=https://yamadharma.github.io/,
+]
+
+\author[1]{Leticia Pinto-Alva}[%
+% orcid=0000-0002-0877-7063,
+% email=kulyabov-ds@rudn.ru,
+% url=https://yamadharma.github.io/,
+]
+
+
+
+
+
+\author[1]{Kaleen Shrestha}[%
+% orcid=0000-0002-0877-7063,
+% email=kulyabov-ds@rudn.ru,
+% url=https://yamadharma.github.io/,
+]
+
+\author[1]{Xiaoyuan Zhu}[%
+% orcid=0000-0002-0877-7063,
+% email=kulyabov-ds@rudn.ru,
+% url=https://yamadharma.github.io/,
+]
+
+
+
+
+
+\author[1]{Maja J Matari\'c}[%
+% orcid=0000-0001-7116-9338,
+% email=i.tiddi@vu.nl,
+% url=https://kmitd.github.io/ilaria/,
+]
+%% Footnotes
+\cortext[1]{Corresponding author.}
+% \fntext[1]{These authors contributed equally.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+Socially assistive robots (SARs) have shown great success in providing personalized cognitive-affective support for user populations with special needs such as older adults, children with autism spectrum disorder (ASD), and individuals with mental health challenges. The large body of work on SAR demonstrates its potential to provide at-home support that complements clinic-based interventions delivered by mental health professionals, making these interventions more effective and accessible. However, there are still several major technical challenges that hinder SAR-mediated interactions and interventions from reaching human-level social intelligence and efficacy. With the recent advances in large language models (LLMs), there is an increased potential for novel applications within the field of SAR that can significantly expand the current capabilities of SARs. However, incorporating LLMs  introduces new risks and ethical concerns that have not yet been encountered, and must be carefully be addressed to safely deploy these more advanced systems.
+In this work, we aim to conduct a brief survey on the use of LLMs in SAR technologies, and discuss the potentials and risks of applying LLMs to the following three major technical challenges of SAR: 1) natural language dialog; 2) multimodal understanding; 3) LLMs as robot policies.
+\end{abstract}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+% \begin{keywords}
+%   LaTeX class \sep
+%   paper template \sep
+%   paper formatting \sep
+%   CEUR-WS
+% \end{keywords}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Introduction}
+
+At the intersection of assistive robots and socially interactive robots, socially assistive robots aim to provide assistance to support users' cognitive-affective needs through social interaction~\cite{feil2011socially}. Past studies have demonstrated the benefits and potentials of deploying SAR to support a diverse set of user populations including individuals with mental health challenges~\cite{scoglio2019use}, children with ASD~\cite{cabibihan2013robots}, older adults~\cite{shishehgar2018systematic}, and K-12 students~\cite{randall2019survey}. With more affordable robot hardware~\cite{koh2021impacts, pinto2022physical, koh2022usability}, SARs have the potential to lower the socio-economic barriers that limit access to personalized therapies, companionship, and education. 
+%SAR therefore has the potential to lower the socio-economic barriers to enable more accessible and personalized therapies, education and companionship. 
+However, prior work has also demonstrated that the existing SAR interactions have not yet been able to understand multimodal (language and visual) social dynamics~\cite{robinson2023robotic, li2021intention} and respond with human-like dialog~\cite{skantze2021turn} and actions~\cite{akalin2021reinforcement}.
+
+With the recent advances in natural language processing (NLP) research, large language models (LLMs) such as GPT4 have shown tremendous success in tasks both within the field of NLP (such as language modeling, question answering, and translation)~\cite{achiam2023gpt} and outside of the traditional NLP tasks (such as programming~\cite{xu2022systematic}, robot planning~\cite{singh2023progprompt}, and autonomous driving~\cite{cui2024survey}). These significantly improved capabilities of LLMs may open up new possibilities into tackling the core technical challenges of SAR, and help us get closer to achieving more effective and human-level social assistance for people with special needs.
+
+In this work, we categorize the core technical challenges of SAR into three areas: 1) natural language dialog; 2) multimodal understanding; 3) LLMs as robot policies. To survey the existing work on LLM-powered SARs in these three categories of technical challenges, we used Google Scholar to search the relevant papers in major human-robot interaction conferences, journals and arXiv. For each of the following sections, we aim to: identify the potentials of LLMs for SAR; survey the existing work; and discuss future directions.
+
+
+
+
+
+
+
+
+\section{Natural Language Dialogue }
+
+Natural language dialogue is at the core of human-centered social interaction. Yet prior to the recent breakthroughs in LLM technologies, SARs mainly relied on either wizard-of-oz teleoperation~\cite{erich2017systematic} or pre-defined rule-based dialogue management systems~\cite{erich2017systematic, youssef2022survey}. SARs employing traditional non-LLM-based conversational systems are limited by their inability to accurately interpret human dialogue, limited space of vocabulary in dialogue generation, lack of understanding of context and capabilities to personalize, and lack of capability to effectively utilize online resources~\cite{grassi2022knowledge}.
+
+
+% or used data-heavy and high-complexity~\cite{salehinejad2017recent} reinforcement learning methods ~\cite{youssef2022survey}. 
+
+%Interactive SARs that respond to user dialogue with gestures or movement rely on language comprehension, and conversational SARs must also be able to contribute appropriate responses. Prior to recent LLM breakthroughs, the lower end of SAR conversation was seen in rule-based dialogue with limited vocabulary, while the higher end was characterized by word and character embedding and recurrent neural network architectures using long short-term memory networks or gated recurrent units ~\cite{youssef2022survey}. 
+
+%Outside of SARs, auto-regressive and masked LMs made possible and improved natural language inference, question answering, paraphrase detection, sentiment analysis, and linguistic acceptability (grammar-checking), and encoder-decoder LMs provided denoising capability through text infilling and sentence permutation ~\cite{min2023recent}. 
+
+By applying the state-of-art LLM models such as GPT4~\cite{achiam2023gpt}, the recent work on LLM-powered SAR has been mainly focused on enabling more accurate dialog understanding and more human-like and context-aware dialogue generation. LLM-powered SARs are able to produce varied dialogue while 'staying on topic' ~\cite{billing2023language}. They can engage in more natural, flexible conversation with users from populations of interest, such as older adults and children with autism-spectrum disorder~\cite{bertacchini2023social}. \citet{spitale2023vita} designed a LLM-powered SAR as a motivational coach with both informative and emotional objectives, demonstrating that LLMs can be used to understand long-horizon context and enable long-term personalization. In instructional settings, LLM-powered SARs combine the vast knowledge base and interactive content-delivery of LLMs with the the capabilities and engaging nature of physically embodied agents~\cite{wake2023gpt}. 
+
+Despite this progress, \citet{irfan2023between} shows that hallucinations, obsolete information, latency and disengagement cues may still cause frustration and confusion, which could be detrimental to socially assistive human-robot interaction. 
+% Therefore, more exploration is still needed to overcome these limitations by better aligning the LLM with the goal of SAR interaction.
+More exploration is needed to overcome these limitations and harness the power of LLMs in ways that better align with the unique goals of SAR interactions.
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Natural Language Understanding Experiments}
+    \label{tab:table1}
+    \begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+      $\alpha$ & $\beta$ & $\gamma$ \\
+      \hline
+      1 & 1110.1 & a\\
+      2 & 10.1 & b\\
+      3 & 23.113231 & c\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+% In an instructional setting, the knowledge base and conversational ability of LLMs-powered SARs produced informative dialogue in addition to pre-exisiting physical capacity for engagement or assistance ~\cite{wake2023gpt}.
+
+
+
+% LLMs enable SARs to achieve more meaningful exchanges and employ emotional context to create more human-like conversational interactions. \citet{mishra2023real} found that LLM-powered SARs could reliably generate emotions that were effectively perceived by their study participants. 
+
+
+
+%In an instructional setting, the knowledge base and conversational ability of LLMs embedded in SARs produced informative dialogue in addition to pre-exisiting physical capacity for engagement or assistance ~\cite{wake2023gpt}. Human-like exchange starts with more human-like perception, as demonstrated by an SAR that reflected emotions determined from sentiment analysis ~\cite{mishra2023real}. To promote interaction and social cognition, this emotion recognition was compounded with the ability to produce varied dialogue while 'staying on topic' ~\cite{billing2023language} to enable more natural, flexible conversations in studies on SARs engaging with older adults and children with autism-spectrum disorder ~\cite{bertacchini2023social}. An SAR employed as a motivational coach pursued both informative and emotional objectives, asking relevant questions and delivering appropriate information in response to follow-ups ~\cite{spitale2023vita}. Beyond these examples, SARs could expand their current therapeutic benefits to better serve users with trailing, interrupted, or disfluent speech and could unlock new areas of application like speech therapy.
+
+
+\section{Multimodal Understanding}
+
+To enable successful socially assistive human-robot interactions, the robot needs to accurately understand the user's cognitive-affective state (user engagement, affect and intent) with multimodal perceptual data (language, visual, and audio)~\cite{youssef2022survey}. The existing work on multimodal social understanding rely on training and fine-tuning machine learning (ML) models with data collected from previous SAR deployments~\cite{robinson2023robotic}. However, the definition of cognitive-affective states may vary in different social contexts. Due to the independent and identically distributed (IID) assumption made by ML model training~\cite{wang2022generalizing}, the existing ML models struggle to generalize effectively and quickly to test data that are distributed differently from the training data, particularly in the context of SAR~\cite{shi2022toward}.
+
+Multimodal language models (MLMs) such as state-of-the-art vision-language models CLIP~\cite{radford2021learning}, ALIGN~\cite{jia2021scaling}, and GPT-4V~\cite{achiam2023gpt} have shown promising zero-shot performance on a variety of human-centered visual tasks~\cite{zhang2023vision, wu2023gpt4vis}. Furthermore, these MLMs also demonstrated incredible few-shot capabilities to quickly adapt by prompting with natural language~\cite{ge2023mllm}. This indicates that MLMs may also be capable of adapting to novel social context for more generalizable and accurate multimodal social understanding. Despite the recent progress in computer vision and robotics, using MLMs for SAR is still largely unexplored, but this direction of research shows great potentials in significantly enabling better multimodal social understanding for socially assistive human-robot interaction.
+
+\section{LLMs as Robot Policies}
+
+In an ideal socially assistive human-robot interaction, the SAR should fluently learn and reason about the user's states and provide the best feedback or action as assistance. The space of user's states and robot feedback or actions can be large and continuous~\cite{clabaugh2019escaping}. Existing SAR policies such as rule-based system or reinforcement learning can not be efficiently trained and can not robustly work on large and continuous spaces with limited amounts of data~\cite{akalin2021reinforcement}. Past work has circumvented this problem by constraining the interaction into pre-defined tablet/computer games with small user state and action spaces~\cite{clabaugh2019escaping}. LLMs may help us relax this constraint and enabling more natural interaction through allowing a continuous and more human-like formulation of space for user states and robot actions.
+
+Recent studies in robotics and NLP have successfully employed LLMs as robot policies in the setting of autonomous driving~\cite{cui2024survey}, robot task planning~\cite{singh2023progprompt, saycan-ahn2022i}, social commonsense~\cite{sap-etal-2019-social} and social reasoning~\cite{gandhi2023understanding}. In the field of SAR, the existing work has mainly only focused on applying LLMs to match the affective state of robot feedback with the sentiment of robot's dialog~\cite{lee2023developing, mishra2023real, lim2023sign}. These studies have shown that LLM-powered robot policies for gesture matching enable more context-aware and natural robot gesture. Research using LLMs as robot policies has not yet explored 1) how to enable SARs to form robot policies for spontaneous tasks instead of only pre-defined ones, such as helping children with ASD navigate through an unpleasant social interaction they just encountered during the day at school; 2) how to enable SAR policies to engage users with educational tasks while keeping them both challenged and encouraged; 3) how to reason socially about the user's intent and needs with partially observable information using multimodal data; 4) how to enable personalized SAR policies to quickly align with each user's unique needs, personality and values, so the SAR can be perceived to be more helpful and empathetic.
+
+
+% \section{Personalization with Human Feedback}
+% [Any SAR papers]
+
+% [Relevant work in NLP, HCI]
+% There has been work on inferring human preference from language for reward modeling \cite{lin-etal-2022-inferring}, as well as a push to learn from language as a way to predict how humans will behave \cite{lin2023learning}. These works, so far, have not been applied to SAR applications, and are usually explored in task-oriented setting (e.g. flight-booking dialog system). 
+
+% Understanding social context is also very important for a model to properly interpret a user's state and choose the best next action. Social commonsense reasoning has been a growing topic in NLP \cite{sap-etal-2019-social}, with work merging symbolic approaches (e.g. knowledge bases/graphs) with neural architectures \cite{bosselut-etal-2019-comet}.
+
+% Reinforcement learning from human feedback (RLHF) \cite{stiennon2022learning} is now being used to alight generation by ChatGPT to human preferences with regards to safety has been ...
+
+\section{Risks and Safety}
+
+Because SAR has been mainly designed to support vulnerable populations such as children or individuals with mental health challenges~\cite{mataric2016socially}, it is crucial to ensure absolute safety during socially assistive human-robot interactions. Despite the great success in LLMs' capabilities, their lack of explainability and theoretical safety guarantees~\cite{huang2023survey} may introduce significant risks and concerns by 1) amplifying unfairness and human bias~\cite{acerbi2023large}; 2) harming data security and privacy by unethical use of personal data~\cite{liyanage2020ethical}; and 3) hallucination behaviors causing potential harms to users~\cite{zhang2023siren}. For these reasons, the trustworthiness of LLM-powered SAR needs to be extensively evaluated before these system can be independently deployed with vulnerable populations without human monitoring.
+
+% *Multimodality is needed in robots that physically interact with their clients or need to response to certain emotional cues.
+% *Contradiction and short memory is a drawback of LLMs and SARs may be less effective as companions as a result
+
+
+
+
+% [Leticia:]
+% Addressing safety and potential ethical concerns, as explained by \cite{weidinger2021ethical}, it's crucial to acknowledge the following points. Firstly, anthropomorphizing systems can result in overreliance or unsafe utilization. Human users may place undue confidence, trust, or expectations in these robot companions based on their human-like language communication, as seen in the psychotherapy context. This could result in disappointment or further issues of mistrust. Secondly, there is a risk of creating avenues that could exploit user trust, leading to the unauthorized acquisition of private information. According to a study by Google PAIR, individuals may inadvertently disclose more information or excessively rely on an AI system when they mistake it for a human being.  Additionally, there's a concern about the promotion of harmful stereotypes, particularly when implying gender or ethnic identity. Given the current utilization of social robots in educational environments, the presence of biased or harmful information in the content imparted to students could lead to severe consequences\cite{zhang2023large}. These considerations underscore the importance of a responsible and cautious approach to developing and implementing systems.
+
+
+% In terms of contextual understanding, \cite{zhang2023large} underscores that despite the advancements in Large Language Models (LLM), there remains a potential for misinterpretations and a lack of alignment between the posed questions and the provided answers by the LLM. This is particularly crucial in scenarios such as instruction following and task completion, exemplified in the context of educational robots for children or robot companions for older adults. For example,  \cite{irfan2023between}  shows some limitations when a personalized companion robot, built on Furhat robot with GPT-3.5 for older adults, the conversations between the robot and the participant can be found boring. In the study, participants mostly wanted to discuss hobbies and interests to make a connection, but the robot trained with an LLM didn't have or wanted to discuss any favorite books or movies.
+
+
+% In terms of scalability and generalization, an essential yet intricate goal is to attain robust generalization, ensuring that models can adeptly understand and respond to unforeseen scenarios, diverse conversational styles, or languages not encountered during their training. Despite recent revolutionary technological advancements, the models remain oversized in terms of architecture and restricted in the number of tokens per prompt. Overcoming these limitations for enhanced performance across various domains, enabling seamless scaling to support numerous concurrent interactions, and accommodating a broad spectrum of domains and languages without compromising performance still pose challenges.
+
+\bibliography{aaai}
+
+\end{document}
+
+%%
+%% End of file

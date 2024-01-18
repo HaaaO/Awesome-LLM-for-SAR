@@ -1,19 +1,29 @@
-# Awesome-LLM-for-SAR
-An up-to-date list of papers and codebases working on applying large language models (LLM) to enable better social and socially assistive human-robot interaction.
+# LaTeX user template and guide
 
-# Contents
-- [Awesome-LLM-for-SAR](README.md#Awesome-LLM-for-SAR)
-- [Contents](README.md#Contents)
-- [Papers](README.md#Papers)
-  - [Survey](README.md#Papers##Survey)
-  - [Natural Language Dialogue](README.md#Papers##Natural-Language-Dialogue)
-  - [Multimodal Understanding](README.md#Papers##Multimodal-Understanding)
-  - [LLMs as Robot Policies](README.md#Papers##LLMs-as-Robot-Policies)
-  - [Risks and Safety](README.md#Papers##Risks-and-Safety)
+To compile user guide:
 
-# Papers
-## Survey
-## Natural Language Dialogue
-## Multimodal Understanding
-## LLMs as Robot Policies
-## Risks and Safety
+1. `pdflatex sample-1col`
+2. `bibtex sample-1col`
+3. `pdflatex sample-1col`
+4. `pdflatex sample-1col`
+
+and
+
+1. `pdflatex sample-2col`
+2. `bibtex sample-2col`
+3. `pdflatex sample-2col`
+4. `pdflatex sample-2col`
+
+or
+
+use the makefile:
+
+`make`
+
+
+For the "minted" versions:
+
+1. `pdflatex -shell-escape sample-1col+minted`
+2. `pdflatex -shell-escape sample-2col+minted`
+
+
