@@ -1,30 +1,19 @@
-# LATEX: pdflatex | xelatex | lualatex
-LATEX = lualatex
-LATEX_FLAGS = -shell-escape
-BIBTEX = bibtex
+# Awesome-LLM-for-SAR
+An up-to-date list of papers and codebases working on applying large language models (LLM) to enable better social and socially assistive human-robot interaction.
 
-FILES = $(patsubst %.tex, %.pdf, $(wildcard *.tex))
+# Contents
+- [Awesome-LLM-for-SAR](README.md#Awesome-LLM-for-SAR)
+- [Contents](README.md#Contents)
+- [Papers](README.md#Papers)
+  - [Survey](README.md#Papers##Survey)
+  - [Natural Language Dialogue](README.md#Papers##Natural-Language-Dialogue)
+  - [Multimodal Understanding](README.md#Papers##Multimodal-Understanding)
+  - [LLMs as Robot Policies](README.md#Papers##LLMs-as-Robot-Policies)
+  - [Risks and Safety](README.md#Papers##Risks-and-Safety)
 
-all: $(FILES)
-
-
-%.pdf: %.tex
-	$(LATEX) $(LATEX_FLAGS) $<
-	$(LATEX) $(LATEX_FLAGS) $<
-	-$(BIBTEX) `basename $< .tex`
-	$(LATEX) $(LATEX_FLAGS) $<
-	$(LATEX) $(LATEX_FLAGS) $<
-	$(LATEX) $(LATEX_FLAGS) $<
-	qpdf --linearize --newline-before-endstream $@ /tmp/$@
-	mv /tmp/$@ $@
-
-clean:
-	-rm -f *.{log,toc,tac,aux,dvi,ps,bbl,blg,tmp,nav,out,snm,vrb,rel,cut,abs,xmpi,xmpdata,*~}
-	-rm -rf out _minted* auto
-	for i in $(ALLSUBDIRS); do \
-	    (cd $$i; make clean) || exit 1; \
-	done
-	-rm $(FILES)
-
-cleanall: clean
-	-rm -rf out auto
+# Papers
+## Survey
+## Natural Language Dialogue
+## Multimodal Understanding
+## LLMs as Robot Policies
+## Risks and Safety
