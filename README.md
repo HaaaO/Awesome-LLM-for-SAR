@@ -12,9 +12,16 @@ An up-to-date list of papers and codebases working on applying large language mo
 
 # Papers
 ## Natural Language Dialogue
-### Survey
-### Conference
+### State of the art (better word here)
+
+### Experimental (pick better word here)
+Language Models for Human-Robot Interaction (Billing 2023)
+A social robot connected with chatGPT to improve cognitive functioning in ASD subjects (Bertacchini 2023)
+VITA: A Multi-modal LLM-based System for Longitudinal, Autonomous, and Adaptive Robotic Mental Well-being Coaching (Spitale 2023)
+GPT Models Meet Robotic Applications: Co-Speech Gesturing Chat System (Wake 2023)
+Applying Large Language Models to Companion Robots for Open-Domain Dialogues with Older Adults (Irfan 2023)
 ## Multimodal Understanding
+
 ### Survey
 ### Conference
 ## LLMs as Robot Policies
