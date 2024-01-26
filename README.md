@@ -11,7 +11,7 @@ An up-to-date list of papers and codebases working on applying large language mo
   - [Risks and Safety](README.md#Papers##Risks-and-Safety)
 
 # Papers
-##Survey
+## Survey
 Socially assistive robotics [[IEEE 2011]](10.1109/MRA.2010.940150) \
 Socially assistive robotics [[2016]](https://doi.org/10.1007/978-3-319-32552-1_73) \
 Social {IQ}a: Commonsense Reasoning about Social Interactions [[arXiv 2019]] (https://arxiv.org/abs/1904.09728) \
@@ -28,15 +28,16 @@ Intention understanding in human--robot interaction based on visual-NLP semantic
 A systematic evaluation of large language models of code [[SIGPLAN 2022]](https://dl.acm.org/doi/abs/10.1145/3520312.3534862) \
 A survey on multimodal large language models for autonomous driving[[IEEE/CVF 2024]](https://openaccess.thecvf.com/content/WACV2024W/LLVM-AD/html/Cui_A_Survey_on_Multimodal_Large_Language_Models_for_Autonomous_Driving_WACVW_2024_paper.html) \
 Escaping oz: Autonomy in socially assistive robotics [[2019]](https://doi.org/10.1146/annurev-control-060117-104911) \
-A survey on recent advances in social robotics [[MDPI 2022]](https://doi.org/10.3390/robotics11040075) \
 Large language models for human-robot interaction: A review [[BIR 2023]](https://doi.org/10.1016/j.birob.2023.100131)\
 A systematic literature review of experiments in socially assistive robotics using humanoid robots [[arXiv 2017]](https://arxiv.org/abs/1711.05379) \
 Learning to summarize from human feedback [[NeurIPS 2020]](https://arxiv.org/abs/2009.01325) \
-Recent advances in recurrent neural networks [[arXiv 2017]](https://arxiv.org/abs/1801.01078)\
+Recent advances in recurrent neural networks [[arXiv 2017]](https://arxiv.org/abs/1801.01078)
 
 ## Natural Language Dialogue
-### State of the art (better word here)
-Knowledge-grounded dialogue flow management for social robots and conversational agents [[IJSR 2022]](https://link.springer.com/article/10.1007/s12369-022-00868-z) \
+### Survey and State-of-the Art
+A survey on recent advances in social robotics [[MDPI 2022]](https://doi.org/10.3390/robotics11040075) \
+Knowledge-grounded dialogue flow management for social robots and conversational agents [[IJSR 2022]](https://link.springer.com/article/10.1007/s12369-022-00868-z) 
+
 ### Experimental (pick better word here)
 Language Models for Human-Robot Interaction [[HRI 2023]](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1744270&dswid=-2482) \
 A social robot connected with chatGPT to improve cognitive functioning in ASD subjects [[Front Psychol 2023]] (10.3389/fpsyg.2023.1232177) \
@@ -45,7 +46,7 @@ GPT Models Meet Robotic Applications: Co-Speech Gesturing Chat System [[arXiv 20
 Applying Large Language Models to Companion Robots for Open-Domain Dialogues with Older Adults [[2023]](https://www.researchsquare.com/article/rs-2884789/v1) 
 
 ## Multimodal Understanding
-### State of the art/Survey
+### Survey
 Emotional dialogue generation using image-grounded language models [[CHI 2018]](https://doi.org/10.1145/3173574.3173851) \
 Generalizing to unseen domains: A survey on domain generalization[[IEEE 2022]](10.1109/TKDE.2022.3178128) \
 Toward personalized affect-aware socially assistive robot tutors for long-term interventions with children with autism[[THRI 2022]](https://doi.org/10.1145/3526111) \
