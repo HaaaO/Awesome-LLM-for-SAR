@@ -14,7 +14,7 @@ An up-to-date list of papers and codebases working on applying large language mo
 ##Survey
 Socially assistive robotics [[IEEE 2011]](10.1109/MRA.2010.940150) \
 Socially assistive robotics [[2016]](https://doi.org/10.1007/978-3-319-32552-1_73) \
-Social {IQ}a: Commonsense Reasoning about Social Interactions [[EMNLP-IJCNLP 2019]] 
+Social {IQ}a: Commonsense Reasoning about Social Interactions [[arXiv 2019]] (https://arxiv.org/abs/1904.09728) \
 Why robots? A survey on the roles and benefits of social robots in the therapy of children with autism [[arXiv 2019]](https://arxiv.org/abs/1904.09728) \
 A systematic review of research into how robotic technology can help older people [[2018]](https://doi.org/10.1016/j.smhl.2018.03.002) \
 A survey of robot-assisted language learning [[THRI 2019]] (https://doi.org/10.1145/3345506) \
@@ -42,32 +42,31 @@ Language Models for Human-Robot Interaction [[HRI 2023]](https://www.diva-portal
 A social robot connected with chatGPT to improve cognitive functioning in ASD subjects [[Front Psychol 2023]] (10.3389/fpsyg.2023.1232177) \
 VITA: A Multi-modal LLM-based System for Longitudinal, Autonomous, and Adaptive Robotic Mental Well-being Coaching [[arXiv 2023]] (https://arxiv.org/abs/2312.09740) \
 GPT Models Meet Robotic Applications: Co-Speech Gesturing Chat System [[arXiv 2023]] (https://arxiv.org/abs/2306.01741) \
-Applying Large Language Models to Companion Robots for Open-Domain Dialogues with Older Adults [[2023]](https://www.researchsquare.com/article/rs-2884789/v1) \
+Applying Large Language Models to Companion Robots for Open-Domain Dialogues with Older Adults [[2023]](https://www.researchsquare.com/article/rs-2884789/v1) 
 
 ## Multimodal Understanding
 ### State of the art/Survey
 Emotional dialogue generation using image-grounded language models [[CHI 2018]](https://doi.org/10.1145/3173574.3173851) \
 Generalizing to unseen domains: A survey on domain generalization[[IEEE 2022]](10.1109/TKDE.2022.3178128) \
 Toward personalized affect-aware socially assistive robot tutors for long-term interventions with children with autism[[THRI 2022]](https://doi.org/10.1145/3526111) \
-###New LLM stuff
+Vision-language models for vision tasks: A survey [[arXiv 2023]](https://arxiv.org/abs/2304.00685) \
+
+### LLM developments
+Learning transferable visual models from natural language supervision [[PMLR 2021]](https://proceedings.mlr.press/v139/radford21a) \
+Scaling up visual and vision-language representation learning with noisy text supervision[[PMLR 2021]](https://proceedings.mlr.press/v139/jia21b.html) \
 GPT4Vis: What Can GPT-4 Do for Zero-shot Visual Recognition? [[arXiv]](https://arxiv.org/abs/2311.15732) \
 Palm-e: An embodied multimodal language model[[arXiv 2023]](https://arxiv.org/abs/2303.03378) \
 Prompting Visual-Language Models for Dynamic Facial Expression Recognition [[arXiv 2023]](https://arxiv.org/abs/2308.13382) \
-MLLM-Bench, Evaluating Multi-modal LLMs using GPT-4V[[arXiv 2023]](https://arxiv.org/abs/2311.13951) \
+MLLM-Bench, Evaluating Multi-modal LLMs using GPT-4V[[arXiv 2023]](https://arxiv.org/abs/2311.13951) 
 
 
-### Survey
-Vision-language models for vision tasks: A survey [[arXiv 2023]](https://arxiv.org/abs/2304.00685) \
-Learning transferable visual models from natural language supervision [[PMLR 2021]](https://proceedings.mlr.press/v139/radford21a) \
-Scaling up visual and vision-language representation learning with noisy text supervision[[PMLR 2021]](https://proceedings.mlr.press/v139/jia21b.html) \
-### Conference
 ## LLMs as Robot Policies
 Do As I Can, Not As I Say: Grounding Language in Robotic Affordances[[arXiv 2022]](https://arxiv.org/abs/2204.01691) \
 Understanding social reasoning in language models with language models[[arXiv 2023]](https://arxiv.org/abs/2306.15448) \
-Progprompt: Generating situated robot task plans using large language models [[IEEE]]
+Progprompt: Generating situated robot task plans using large language models [[IEEE]](10.1109/ICRA48891.2023.10161317) \
 A Sign Language Recognition System with Pepper, Lightweight-Transformer, and LLM [[arXiv 2023]](https://arxiv.org/abs/2309.16898) \
 Real-time emotion generation in human-robot dialogue using large language models [[Front. Robot. AI]](10.3389/frobt.2023.1271610) \
-CognitiveDog: Large Multimodal Model Based System to Translate Vision and Language into Action of Quadruped Robot [[arXiv 2024]](https://arxiv.org/abs/2401.09388) \
+CognitiveDog: Large Multimodal Model Based System to Translate Vision and Language into Action of Quadruped Robot [[arXiv 2024]](https://arxiv.org/abs/2401.09388) 
 
 ### Survey
 ### Conference
