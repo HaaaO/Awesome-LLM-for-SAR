@@ -74,8 +74,8 @@ Escaping oz: Autonomy in socially assistive robotics [[2019]](https://doi.org/10
 Reinforcement learning approaches in social robotics [[MDPI 2021]](https://doi.org/10.3390/s21041292)
 
 ### LLM and SAR Developments
-Do As I Can, Not As I Say: Grounding Language in Robotic Affordances[[arXiv 2022]](https://arxiv.org/abs/2204.01691) \
-Understanding social reasoning in language models with language models[[arXiv 2023]](https://arxiv.org/abs/2306.15448) \
+Do As I Can, Not As I Say: Grounding Language in Robotic Affordances [[arXiv 2022]](https://arxiv.org/abs/2204.01691) \
+Understanding social reasoning in language models with language models [[arXiv 2023]](https://arxiv.org/abs/2306.15448) \
 Progprompt: Generating situated robot task plans using large language models [[IEEE]](10.1109/ICRA48891.2023.10161317) \
 A Sign Language Recognition System with Pepper, Lightweight-Transformer, and LLM [[arXiv 2023]](https://arxiv.org/abs/2309.16898) \
 Real-time emotion generation in human-robot dialogue using large language models [[Front. Robot. AI]](10.3389/frobt.2023.1271610) \
@@ -85,5 +85,5 @@ CognitiveDog: Large Multimodal Model Based System to Translate Vision and Langua
 Between Reality and Delusion: Challenges of Applying Large Language Models to Companion Robots for Open-Domain Dialogues with Older Adults [[2023]](https://doi.org/10.21203/rs.3.rs-2884789/v1) \
 Ethical and social risks of harm from language models [[arXiv 2021]](https://arxiv.org/abs/2112.04359) \
 A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation [[arXiv 2023]](https://arxiv.org/abs/2305.11391) \
-Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models[[arXiv 2023]](https://arxiv.org/abs/2309.01219) \
+Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models [[arXiv 2023]](https://arxiv.org/abs/2309.01219) \
 Ethical use of electronic health record data and artificial intelligence: recommendations of the primary care informatics working group of the international medical informatics association [[2020]](10.1055/s-0040-1701980)
