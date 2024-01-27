@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Shi"
+  given-names: "Zhonghao"
+  orcid: "https://orcid.org/0000-0001-8958-6666"
+- family-names: "Landrum"
+  given-names: "Ellen"
+  orcid: "https://orcid.org/0009-0005-9315-5558"
+- family-names: "O'Connell"
+  given-names: "Allison"
+  orcid: "https://orcid.org/0000-0001-8958-6666"
+- family-names: "Kian"
+  given-names: "Mina"
+  orcid: "https://orcid.org/0000-0001-8958-6666"
+- family-names: "Pinto-Alva"
+  given-names: "Leticia"
+  orcid: "https://orcid.org/0000-0001-8958-6666"
+- family-names: "Shrestha"
+  given-names: "Kaleen"
+  orcid: "https://orcid.org/0009-0003-3750-4798"
+- family-names: "Zhu"
+  given-names: "Xiaoyuan"
+  orcid: "https://orcid.org/0000-0001-8958-6666"
+- family-names: "Matari\'c"
+  given-names: "Maja J"
+  orcid: "https://orcid.org/0000-0001-8958-6666"
+title: "awesome-LLM-for-social-HRI"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2024-01-26
+url: "https://github.com/HaaaO/awesome-LLM-for-social-HRI"
